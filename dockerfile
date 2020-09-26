@@ -1,7 +1,7 @@
 FROM golang:alpine as builder
 WORKDIR /go/src/app
 
-COPY ./src .
+COPY ./src/app .
 RUN go get -d -v .
 RUN go build -o server
 RUN rm server.go
