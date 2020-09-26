@@ -10,13 +10,13 @@ spec:
     template:
         metadata:
             labels:
-                app: go.hpa
+                app: go-hpa
         spec:
             containers:
-            - name: go-hpa-container
+              - name: go-hpa-container
                 image: xpto1/go-hpa
                 ports:
-                - conteinerPort: 80
+                  - containerPort: 80
                 resources:
                     limits:
                         cpu: 100m
