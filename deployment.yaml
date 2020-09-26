@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: go-hpa
+    name: go-hpa-deployment
 spec:
     selector:
         matchLabels:
@@ -11,16 +11,16 @@ spec:
         metadata:
             labels:
                 app: go.hpa
-    spec:
-        containers:
-          - name: go-hpa-container
-            image: xpto1/go-hpa
-            ports:
-              - conteinerPort: 80
-            resources:
-                limits:
-                    cpu: 100m
-                    memory: 200Mi
-                requests:
-                    cpu: 50m
-                    memory: 100Mi
+        spec:
+            containers:
+            - name: go-hpa-container
+                image: xpto1/go-hpa
+                ports:
+                - conteinerPort: 80
+                resources:
+                    limits:
+                        cpu: 100m
+                        memory: 200Mi
+                    requests:
+                        cpu: 50m
+                        memory: 100Mi
