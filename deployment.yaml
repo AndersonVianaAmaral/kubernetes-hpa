@@ -13,8 +13,8 @@ spec:
                 app: go-hpa
         spec:
             containers:
-              - name: go-hpa-container
-                image: xpto1/go-hpa
+              - name: go-hpa
+                image: xpto1/go-hpa:latest
                 ports:
                   - containerPort: 80
                 resources:
